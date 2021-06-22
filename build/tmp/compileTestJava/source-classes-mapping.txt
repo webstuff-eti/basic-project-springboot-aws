@@ -1,0 +1,2 @@
+com/tibaestiago/basicprojectspringbootaws/BasicProjectSpringbootAwsApplicationTests.java
+ com.tibaestiago.basicprojectspringbootaws.BasicProjectSpringbootAwsApplicationTests

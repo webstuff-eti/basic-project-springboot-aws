@@ -1,0 +1,2 @@
+com/tibaestiago/basicprojectspringbootaws/BasicProjectSpringbootAwsApplication.java
+ com.tibaestiago.basicprojectspringbootaws.BasicProjectSpringbootAwsApplication
