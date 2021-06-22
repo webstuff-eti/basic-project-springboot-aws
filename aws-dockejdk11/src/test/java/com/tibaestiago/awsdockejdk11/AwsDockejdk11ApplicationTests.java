@@ -1,10 +1,10 @@
-package com.tibaestiago.awsdocker;
+package com.tibaestiago.awsdockejdk11;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AwsDockerApplicationTests {
+class AwsDockejdk11ApplicationTests {
 
 	@Test
 	void contextLoads() {
