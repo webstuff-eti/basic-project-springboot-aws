@@ -22,12 +22,27 @@ plugins {
 }
 
 group = 'webstuff'
-version = '0.0.1-SNAPSHOT'
+version = '1.0.0'
 sourceCompatibility = '11'
 
-bootJar{
-	baseName('docker_aws_crud_produtos')
+bootJar {
+	baseName = 'docker_aws_crud_produtos'
 	version = '1.0.0'
+	mainClassName = "com.tibaestiago.awsdockejdk11.AwsDockejdk11Application"
+}
+
+repositories {
+	mavenCentral()
+	//maven { url 'https://repo.spring.io/milestone' }
+	//maven { url 'https://repo.spring.io/snapshot' }
+}
+
+dependencies {
+	//Spring Framework
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 task unpack(type: Copy) {
@@ -40,17 +55,6 @@ docker {
 	tags "${bootJar.version}"
 	copySpec.from(tasks.unpack.outputs).into("dependency")
 	buildArgs(['DEPENDENCY': "dependency"])
-}
-
-repositories {
-	mavenCentral()
-}
-
-dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.boot:spring-boot-starter-actuator'
-
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 test {
